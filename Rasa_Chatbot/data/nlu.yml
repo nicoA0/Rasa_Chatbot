@@ -79,7 +79,7 @@ nlu:
     - unhappy
     - not good
     - not very good
-    - extremly sad
+    - extremely sad
     - so saad
     - so sad
 
@@ -89,3 +89,14 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: paly_courses
+  examples: |
+    - What courses does paly offer?
+    - What classes does paly offer?
+    - Paly classes
+    - Paly courses
+    - List all paly classes
+    - List all paly courses
+    - Name all the classes at paly
+    - Name all the courses at paly
