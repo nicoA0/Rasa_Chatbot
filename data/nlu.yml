@@ -1,6 +1,7 @@
 version: "3.1"
 
 nlu:
+
 - intent: greet
   examples: |
     - hey
@@ -100,3 +101,12 @@ nlu:
     - List all paly courses
     - Name all the classes at paly
     - Name all the courses at paly
+    
+- intent: paly_location
+  examples: |
+    - Where is the [math department](destination)?
+    - Where is the [history department](destination)?
+    - Where is the [science department](destination)?
+    - Where is the [english department](destination)?
+    - Where is the [library](destination)?
+    - Where is the [quad](destination)?

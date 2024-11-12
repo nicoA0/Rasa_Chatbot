@@ -1,5 +1,16 @@
 version: "3.1"
 
+entities:
+- destination
+
+slots:
+  destination:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: destination
+
 intents:
   - greet
   - goodbye
@@ -8,6 +19,8 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - paly_courses
+  - paly_location
 
 responses:
   utter_greet:
@@ -29,8 +42,31 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_paly_classes:
+  utter_paly_courses:
   - text: "Paly offers these classes: Math, Science, History, English."
+
+  utter_paly_locate:
+    - condition:
+        - type: slot
+          name: destination
+          value: "math department"
+      text: "The {destination} is usually in the top floor of the 800 building."
+    - condition:
+        - type: slot
+          name: destination
+          value: "history department"
+      text: "The {destination} is located in the bottom floor of the 800 building."
+    - condition:
+        - type: slot
+          name: destination
+          value: "science department"
+      text: "The {destination} can be found in the 1700 building."
+    - condition:
+        - type: slot
+          name: destination
+          value: "english department"
+      text: "The {destination} is usually in the 200 building."
+    - text: "I'm not sure where the {destination} is located."
 
 session_config:
   session_expiration_time: 60

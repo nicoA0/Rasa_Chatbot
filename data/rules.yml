@@ -11,3 +11,13 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Say courses offered anytime the user asks
+  steps:
+  - intent: paly_courses
+  - action: utter_paly_courses
+
+- rule: Say location of department
+  steps:
+  - intent: paly_location
+  - action: utter_paly_locate
