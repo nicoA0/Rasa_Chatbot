@@ -110,3 +110,23 @@ nlu:
     - Where is the [english department](destination)?
     - Where is the [library](destination)?
     - Where is the [quad](destination)?
+
+- intent: paly_clubs
+  examples: |
+    - What clubs are offered at paly?
+    - What clubs does paly have
+    - What clubs does paly offer?
+  
+- intent: paly_tutoring
+  examples: |
+    - Where can I sign up get tutored?
+    - Where can I sign up to be a tutor?
+    - How can I get enrichment hours?
+    - How can I become a tutor
+
+- intent: paly_sports
+  examples: |
+    - How can I join a sports team?
+    - What athletic teams does paly have?
+    - When are tryouts for [some sport]?
+    - What sports does paly offer?

@@ -23,6 +23,7 @@ intents:
   - paly_location
 
 responses:
+
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -67,6 +68,16 @@ responses:
           value: "english department"
       text: "The {destination} is usually in the 200 building."
     - text: "I'm not sure where the {destination} is located."
+
+  utter_paly_clubs:
+  - text: "Paly has a variety of clubs that can be browsed at the quad during lunch on club day."
+
+  utter_paly_tutoring:
+    - text: "Go to the Tower Building next to the Quad to learn more about tutoring resources/opportunities."
+
+  utter_paly_sports:
+    - text: "Paly hosts a variety of sports teams. Visit this website to learn more https://palyathletics.com/."
+
 
 session_config:
   session_expiration_time: 60
