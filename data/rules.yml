@@ -41,4 +41,3 @@ rules:
   - intent: paly_sports
   - action: utter_paly_sports
   - action: utter_did_that_help
-

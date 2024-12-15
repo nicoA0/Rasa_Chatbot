@@ -21,6 +21,9 @@ intents:
   - bot_challenge
   - paly_courses
   - paly_location
+  - paly_clubs
+  - paly_tutoring
+  - paly_sports
 
 responses:
 
@@ -73,7 +76,7 @@ responses:
   - text: "Paly has a variety of clubs that can be browsed at the quad during lunch on club day."
 
   utter_paly_tutoring:
-    - text: "Go to the Tower Building next to the Quad to learn more about tutoring resources/opportunities."
+    - text: "Go to the Tower Building next to the Quad to learn more about tutoring resources and opportunities."
 
   utter_paly_sports:
     - text: "Paly hosts a variety of sports teams. Visit this website to learn more https://palyathletics.com/."

@@ -116,13 +116,27 @@ nlu:
     - What clubs are offered at paly?
     - What clubs does paly have
     - What clubs does paly offer?
+    - Can you tell me about the clubs at paly?
+    - Are there any clubs for coding at paly?
+    - Does paly have a debate club?
+    - Are there any science clubs at paly?
+    - What are some popular clubs at paly?
+    - Can I join a club at paly anytime?
+    - What is the process to join a club at paly?
   
 - intent: paly_tutoring
   examples: |
-    - Where can I sign up get tutored?
+    - Can I get help with math at paly?
+    - Is there tutoring for science subjects at paly?
+    - How do I find a tutor at paly?
+    - How can I sign up to tutor someone in math?
+    - Does paly have peer tutoring services?
+    - Where do I go if I need help with homework?
+    - How can I volunteer as a tutor at paly?
+    - Where can I sign up to get tutored?
     - Where can I sign up to be a tutor?
     - How can I get enrichment hours?
-    - How can I become a tutor
+    - How can I become a tutor?
 
 - intent: paly_sports
   examples: |
@@ -130,3 +144,12 @@ nlu:
     - What athletic teams does paly have?
     - When are tryouts for soccer?
     - What sports does paly offer?
+    - Does paly have a football team?
+    - How can I join the track and field team?
+    - What are the requirements to join the basketball team?
+    - Are there any water sports teams at paly?
+    - When are the tryouts for volleyball?
+    - How can I sign up for cross-country?
+    - Does paly offer swimming as a sport?
+    - Can I join the soccer team mid-season?
+    - Who do I talk to about joining a sports team?
