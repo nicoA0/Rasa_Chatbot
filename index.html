@@ -1,9 +1,82 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <title>RASA Chatbot</title>
-  </head>
-  <body style="background-image: url('paly.jpg'); background-size: cover; background-repeat: no-repeat;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palo Alto High School Map</title>
+    <style>
+        body {
+            background: url('paly.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #map {
+            height: 500px;
+            width: 500px;
+            border-radius: 15px; /* Optional: Adds rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+        }
+    </style>
+    <script>
+        function initMap() {
+            var location = { lat: 37.4380, lng: -122.1568 }; // Palo Alto High School
+
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 18,  // Closer view of the school
+                center: location,
+                mapTypeId: "satellite" // Optional: Uses a satellite view for better visuals
+            });
+
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Palo Alto High School"
+            });
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: "<h3>Palo Alto High School</h3><p>Welcome to Paly!</p>"
+            });
+
+            marker.addListener("click", function() {
+                infoWindow.open(map, marker);
+            });
+
+            // Allow users to add markers by clicking
+            map.addListener("click", function(event) {
+                addMarker(event.latLng, map);
+            });
+        }
+
+        function addMarker(location, map) {
+            new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</head>
+<body>
     <div id="rasa-chat-widget" data-websocket-url="http://localhost:5006/socket.io"></div>
     <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/JavaScript"></script>
-  </body>
+    <h2>Palo Alto High School Interactive Map</h2>
+    <div id="map"></div>
+
+    <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMA8GGtgqdBgEdZ8Ub692KJ3svK0ZVUz0&callback=initMap">
+    </script>
+</body>
 </html>
+
